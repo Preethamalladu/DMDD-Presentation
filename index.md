@@ -17,6 +17,8 @@ This is a short description of what we have done so far.
     1)  Challenges Faced
     2)  Failed vs Sucessfull Ideas
     3)  Final Images
+    
+    
 •   The Database Part
 
     1)  
@@ -33,7 +35,7 @@ In the first week of the project we have gone through the process on how we can 
 > How to Translate and Rotate an object in 3D space
 > How to reset the obects movemenets 
 > How to create a script in python which can do the above
-> How to render images
+> How to render images using MayaHardware 2.0
 
 
 ## The Image Generation Part
