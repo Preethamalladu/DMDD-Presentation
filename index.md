@@ -6,15 +6,37 @@ Text can be **bold**, _italic_, or ~~strikethrough~~.
 
 [Link to another page](./another-page.html).
 
-There should be whitespace between paragraphs.
+This is a short description of what we have done so far.
 
-There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
+**Index**
 
-# Header 1
-Testing one two
-This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
+•   Understanding Maya Scripting
 
-## Header 2
+•   The Image Generation Part
+
+    1)  Challenges Faced
+    2)  Failed vs Sucessfull Ideas
+    3)  Final Images
+•   The Database Part
+
+    1)  
+    2)
+    3)
+
+
+
+## Understanding Maya Scripting
+
+In the first week of the project we have gone through the process on how we can automate tasks in Maya using python and mel, we acquired knowledge about scripting from, Proffersor Nick Brown and through various other sites.
+
+### Things we learnt
+> How to Translate and Rotate an object in 3D space
+> How to reset the obects movemenets 
+> How to create a script in python which can do the above
+> How to render images
+
+
+## The Image Generation Part
 
 > This is a blockquote following a header.
 >
