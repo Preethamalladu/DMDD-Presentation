@@ -44,7 +44,7 @@ After the first week we have have tried few diffrent ways to render images ,inor
 
 ### Just The Object rotated in space
 
-    In this method I just rotated the image using its pivot 
+> In this method I just rotated the image using its pivot 
 
 ![Branching](https://raw.githubusercontent.com/Preethamalladu/DMDD-Presentation/master/chair_test_x0y0z7.jpg)
 
