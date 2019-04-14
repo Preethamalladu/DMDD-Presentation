@@ -160,7 +160,7 @@ while(cx<= 360):
 
 ### My contribution towards the final code
 
-##### **Though the logic for rotating images is similar we chose while loop over for loop for simplicity**
+**Though the logic for rotating images is similar we chose while loop over for loop for simplicity**
 
 **This snippet automatically sets the renderer to Maya Hardware 2.0 and saves images as .PNG files**
 
