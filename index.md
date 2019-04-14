@@ -46,7 +46,7 @@ After the first week we have have tried few diffrent ways to render images ,inor
 
 > In this method we just rotated the image using its pivot 
 
-![Branching](https://guides.github.com/activities/hello-world/chair_test_starting.jpg)
+![Branching](https://raw.githubusercontent.com/Preethamalladu/DMDD-Presentation/master/chair_test_x0y0z7.jpg)
 
 
 ![Branching](https://guides.github.com/activities/hello-world/chair_test_x0y0z7.jpg)
