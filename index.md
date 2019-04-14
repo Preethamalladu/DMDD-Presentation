@@ -44,12 +44,50 @@ After the first week we have have tried few diffrent ways to render images ,inor
 
 ### Just The Object rotated in space
 
-> In this method we just rotated the image using its pivot 
+    In this method I just rotated the image using its pivot 
 
 ![Branching](https://raw.githubusercontent.com/Preethamalladu/DMDD-Presentation/master/chair_test_x0y0z7.jpg)
 
 
-![Branching](https://guides.github.com/activities/hello-world/chair_test_x0y0z7.jpg)
+![Branching](https://raw.githubusercontent.com/Preethamalladu/DMDD-Presentation/master/chair_test_starting.jpg)
+
+As we can see the images dont seem so refined, and also rotating the object does not make sense for what we want to achive, thus moving to a new method.
+
+### Creating a camera and rotaing the camera around the object
+
+> Since rotating the image was not an option , rotating the camera was the alternative, thus came up with a solution which looks like so,
+
+![Branching](https://raw.githubusercontent.com/Preethamalladu/DMDD-Presentation/master/char_circle.PNG)
+
+### Creating Environments to get dynamic shadows
+
+> This was the part which took a lot of time, we had to come up with a solution which gave us dynamic shaodows meaning when the cameras angle changed the shadows have to change too.
+
+
+**Problems I faced and solutions I came up with**
+
+Firstly, we had to make sure we do not want gradients in the background. Therefore I came up with diffrent iterations of environments
+
+
+•   Iteration One :
+
+![Branching](https://raw.githubusercontent.com/Preethamalladu/DMDD-Presentation/master/obj31.jpg)
+
+It is clear what the problem is,  bad lights and gradients.
+
+
+•   Iteration Two :
+
+![Branching](https://raw.githubusercontent.com/Preethamalladu/DMDD-Presentation/master/objX0Y315Z0.jpg)
+
+In this environment , instead of using a box environment like above I used a sphere environment and avoided getting gradients but the shadows were static, 
+
+•   Iteration Three :
+
+![Branching](https://raw.githubusercontent.com/Preethamalladu/DMDD-Presentation/master/Telescope_X_0_Y_45_Z_90.png)
+
+This environment was done by Akash Srivatsava, and was selected as final environment since it had minial noise and had dyanmic shadows.
+
 
 ### Header 3
 
