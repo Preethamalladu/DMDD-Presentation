@@ -40,9 +40,16 @@ In the first week of the project we have gone through the process on how we can 
 
 ## The Image Generation Part
 
-> This is a blockquote following a header.
->
-> When something is important enough, you do it even if the odds are not in your favor.
+After the first week we have have tried few diffrent ways to render images ,inorder to do so we have tried the follwoing method
+
+### Just The Object rotated in space
+
+> In this method we just rotated the image using its pivot 
+
+![Branching](https://guides.github.com/activities/hello-world/chair_test_starting.jpg)
+
+
+![Branching](https://guides.github.com/activities/hello-world/chair_test_x0y0z7.jpg)
 
 ### Header 3
 
