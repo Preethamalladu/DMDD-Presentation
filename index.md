@@ -10,20 +10,20 @@ This is a short description of what we have done so far.
 
 **Index**
 
-•   Understanding Maya Scripting
+*   Understanding Maya Scripting
 
-•   The Image Generation Part
+*   The Image Generation Part
 
-    1)  Challenges Faced
-    2)  Failed vs Sucessfull Ideas
-    3)  Final Images
+    1.  Challenges Faced
+    1.  Failed vs Sucessfull Ideas
+    1.  Final Images
     
     
-•   The Database Part
+*   The Database Part
 
-    1)  
-    2)
-    3)
+    1.  
+    1.
+    1.
 
 
 
@@ -42,7 +42,7 @@ In the first week of the project we have gone through the process on how we can 
 
 After the first week we have have tried few diffrent ways to render images ,inorder to do so we have tried the follwoing method
 
-### Just The Object rotated in space
+### Just the object rotated in space
 
 > In this method I just rotated the image using its pivot 
 
@@ -64,70 +64,181 @@ As we can see the images dont seem so refined, and also rotating the object does
 > This was the part which took a lot of time, we had to come up with a solution which gave us dynamic shaodows meaning when the cameras angle changed the shadows have to change too.
 
 
-**Problems I faced and solutions I came up with**
+**Problems faced and solutions I came up with**
 
 Firstly, we had to make sure we do not want gradients in the background. Therefore I came up with diffrent iterations of environments
 
 
-•   Iteration One :
+*   Iteration One :
 
 ![Branching](https://raw.githubusercontent.com/Preethamalladu/DMDD-Presentation/master/obj31.jpg)
 
 It is clear what the problem is,  bad lights and gradients.
 
 
-•   Iteration Two :
+*   Iteration Two :
 
 ![Branching](https://raw.githubusercontent.com/Preethamalladu/DMDD-Presentation/master/objX0Y315Z0.jpg)
 
 In this environment , instead of using a box environment like above I used a sphere environment and avoided getting gradients but the shadows were static, 
 
-•   Iteration Three :
+*   Iteration Three :
 
-![Branching](https://raw.githubusercontent.com/Preethamalladu/DMDD-Presentation/master/Telescope_X_0_Y_45_Z_90.png)
+![Octocat](https://raw.githubusercontent.com/Preethamalladu/DMDD-Presentation/master/Telescope_X_0_Y_45_Z_90.png)
 
-This environment was done by Akash Srivatsava, and was selected as final environment since it had minial noise and had dyanmic shadows.
+This environment was done by **Akash Srivatsava**, and was selected as final environment since it had minial noise and had dyanmic shadows.
 
 
-### Header 3
+## Scripting to get Images
 
-```js
-// Javascript code with syntax highlighting.
-var fun = function lang(l) {
-  dateformat.i18n = require('./lang/' + l)
-  return true;
-}
+
+### Script to rotate images
+
+```python
+// python code to rotate the images.
+def rotateImage(objName, deg):
+    for x in range(0, 360/deg):
+        l = 'x'+str(x) + 'y0' + 'z0'
+        cmds.xform(objName, relative=True, rotation=(deg, 0, 0) )
+        screenShot(objName, l) 
+        for y in range(0, 360/deg):
+            l = 'x'+str(x)+ 'Y' +str(y) + 'z0'
+            cmds.xform(objName, relative=True, rotation=(0, deg, 0) ) 
+            screenShot(objName, l) 
+            for z in range (0, 360/deg):
+                l = 'x'+str(x)+'y'+ str(y) +'Z' +str(z)
+                cmds.xform(objName, relative=True, rotation=(0, 0, deg) )
+                screenShot(objName, l)
+```
+### Script to take images
+
+```python
+def screenShot(objName, l):
+    mel.eval('renderWindowRender redoPreviousRender renderView')
+    editor =  'renderView'
+    cmds.renderWindowEditor( editor, e=True,refresh = True,removeAllImages = True, writeImage=('path'+'awp'+str(l)), removeImage = True)
 ```
 
-```ruby
-# Ruby code with syntax highlighting
-GitHubPages::Dependencies.gems.each do |gem, version|
-  s.add_dependency(gem, "= #{version}")
-end
+### Finalized Script to rotate and take images
+
+```python
+import maya.cmds
+cmds.setAttr('defaultRenderGlobals.ren', 'mayaHardware2', type = 'string')
+cmds.setAttr('defaultRenderGlobals.imageFormat', 32) 
+
+cx = 0
+i = 0
+s = cmds.ls(selection = True)
+camName = "camera1"
+camPos = 0
+obj = s[0]
+deg = 45
+cy = 0
+cz = 0
+def screenShot(i):
+    mel.eval('renderWindowRender redoPreviousRender renderView')
+    editor = 'renderView'
+    cmds.renderWindowEditor(editor, e = True, refresh = True, writeImage = ('path' + str(i)))
+
+
+while(cx<= 360):
+    for a in s:
+        x = a +"."+"rotate" +"X"
+        cmds.setAttr(x,cx)
+    cy=0
+    while(cy<=360):
+        for a in s:
+            x = a +"."+"rotate" +"Y"
+            cmds.setAttr(x,cy)
+        cz=0
+        while(cz<=360):
+            for a in s:
+                x = a +"."+"rotate" +"Z"
+                cmds.setAttr(x,cz)
+            l = "_X_"+str(cx) + "_Y_"+str(cy) + "_Z_"+str(cz)
+            camPos = cmds.xform(camName, q=True, ws=True, rp=True)
+            if( camPos[1] > 1.0):
+                screenShot(l)
+
+            cz = cz + deg
+        cy=cy+deg
+    cx=cx+deg
+
 ```
 
-#### Header 4
+### My contribution towards the final code
 
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
+Though the logic for rotating images is similar we chose while loop over for loop for simplicity
 
-##### Header 5
+**This snippet automatically sets the renderer to Maya Hardware 2.0 and saves images as .PNG files**
 
-1.  This is an ordered list following a header.
-2.  This is an ordered list following a header.
-3.  This is an ordered list following a header.
+```python
+cmds.setAttr('defaultRenderGlobals.ren', 'mayaHardware2', type = 'string')
+cmds.setAttr('defaultRenderGlobals.imageFormat', 32)')
+```
 
-###### Header 6
+**This snippet makes sure to take images which are only above the ground thus avoiding redundent images**
 
-| head1        | head two          | three |
-|:-------------|:------------------|:------|
-| ok           | good swedish fish | nice  |
-| out of stock | good and plenty   | nice  |
-| ok           | good `oreos`      | hmm   |
-| ok           | good `zoute` drop | yumm  |
+```python
+camPos = cmds.xform(camName, q=True, ws=True, rp=True)
+if( camPos[1] > 1.0):
+    screenShot(l)
+```
+**Naming convention**
 
-### There's a horizontal rule below this.
+```python
+name = "_X_"+str(cx) + "_Y_"+str(cy) + "_Z_"+str(cz)
+```
+
+* * *
+
+## Stored Procedures to get Front, Back, Top, Left, Right views of the object from the data base
+
+**Top View**
+```sql
+create procedure TopView @ObjName varchar(30) 
+as
+select images from image_table where images like
+              '%' + @ObjName` + '_X_90_Y_0_Z_180' 
+go;
+```
+
+**Front View**
+```sql
+create procedure FrontView @ObjName varchar(30) 
+as
+select images from image_table where images like
+              '%' + @ObjName` + '_X_0_Y_0_Z_0' 
+go;
+```
+
+**Right View**
+```sql
+create procedure RightView @ObjName varchar(30) 
+as
+select images from image_table where images like
+              '%' + @ObjName` + '_X_0_Y_90_Z_0' 
+go;
+```
+
+**Back View**
+```sql
+create procedure BacKView @ObjName varchar(30) 
+as
+select images from image_table where images like
+              '%' + @ObjName` + '_X_0_Y_180_Z_0' 
+go;
+```
+
+**Left View**
+```sql
+create procedure LeftView @ObjName varchar(30) 
+as
+select images from image_table where images like
+              '%' + @ObjName` + '_X_0_Y_270_Z_0' 
+go;
+```
+
 
 * * *
 
