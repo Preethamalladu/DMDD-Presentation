@@ -2,28 +2,16 @@
 layout: default
 ---
 
-Text can be **bold**, _italic_, or ~~strikethrough~~.
-
-[Link to another page](./another-page.html).
 
 This is a short description of what we have done so far.
 
-**Index**
+**Content**
 
 *   Understanding Maya Scripting
 
 *   The Image Generation Part
 
-    1.  Challenges Faced
-    1.  Failed vs Sucessfull Ideas
-    1.  Final Images
-    
-    
 *   The Database Part
-
-    1.  
-    1.
-    1.
 
 
 
@@ -32,9 +20,13 @@ This is a short description of what we have done so far.
 In the first week of the project we have gone through the process on how we can automate tasks in Maya using python and mel, we acquired knowledge about scripting from, Proffersor Nick Brown and through various other sites.
 
 ### Things we learnt
+
 > How to Translate and Rotate an object in 3D space
+
 > How to reset the obects movemenets 
+
 > How to create a script in python which can do the above
+
 > How to render images using MayaHardware 2.0
 
 
@@ -168,7 +160,7 @@ while(cx<= 360):
 
 ### My contribution towards the final code
 
-Though the logic for rotating images is similar we chose while loop over for loop for simplicity
+##### **Though the logic for rotating images is similar we chose while loop over for loop for simplicity**
 
 **This snippet automatically sets the renderer to Maya Hardware 2.0 and saves images as .PNG files**
 
@@ -242,61 +234,26 @@ go;
 
 * * *
 
-### Here is an unordered list:
 
-*   Item foo
-*   Item bar
-*   Item baz
-*   Item zip
-
-### And an ordered list:
-
-1.  Item one
-1.  Item two
-1.  Item three
-1.  Item four
-
-### And a nested list:
-
-- level 1 item
-  - level 2 item
-  - level 2 item
-    - level 3 item
-    - level 3 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-
-### Small image
-
-![Octocat](https://assets-cdn.github.com/images/icons/emoji/octocat.png)
-
-### Large image
-
-![Branching](https://guides.github.com/activities/hello-world/branching.png)
+[Link to another page](./another-page.html).
 
 
-### Definition lists can be used with HTML syntax.
+## What work is left over
 
-<dl>
-<dt>Name</dt>
-<dd>Godzilla</dd>
-<dt>Born</dt>
-<dd>1952</dd>
-<dt>Birthplace</dt>
-<dd>Japan</dd>
-<dt>Color</dt>
-<dd>Green</dd>
-</dl>
+*   Create a website (**Abhi Patodi, has started the work Aditya, Nikunj, Me, Akash will share the work**)
 
-```
-Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
-```
+*   Cloud setup (**Nikunj is currently working at it**)
+
+
+
+## What I am planning to contribute over the summer for the database as a part of SkunkWorks
+
+*   Figure out a way to automate the process of setting the textures and combineing images
+
+*   Pipeline the process of generating images
+
+*   Add more objects 
+
 
 ```
 The final element.
