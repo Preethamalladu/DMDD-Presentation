@@ -2,7 +2,8 @@
 layout: default
 ---
 
-title: The Database Part
+# The Database Part
+
 description: This is a report about the database work we have done
 
 
@@ -73,30 +74,37 @@ The below is the database schema:
 ![Octocat](https://raw.githubusercontent.com/Preethamalladu/DMDD-Presentation/master/hiii.png)
 
 The above schema can be explained with an example below:
-category - table
-category_id: C01 (PK)
-category_name: Animals
 
-Category_object - table
-category_id: C01 (FK)
-object_model_id: C01_01 (PK)
-Object_model_name: Dog
 
-Sub_object - table
-object_model_id: C01_01 (FK)
-sub_object_id: C01_01_01 (PK)
-sub_object_name: labrador
+<br> category - table 
+<br> category_id: C01 (PK) 
+<br> category_name: Animals 
 
-sub_object_imageid - table
-sub_object_id: C01_01_01 (FK)
-image_id: I01 (PK)
 
-image_data - table
-image_id: I01 (FK)
-image_path: link or the path
-image_size: in kb
-image_resolution: ...
-image_type: .png
+<br> Category_object - table
+<br> category_id: C01 (FK)
+<br> object_model_id: C01_01 (PK)
+<br> Object_model_name: Dog
+
+
+<br> Sub_object - table
+<br> object_model_id: C01_01 (FK)
+<br> sub_object_id: C01_01_01 (PK)
+<br> sub_object_name: labrador
+
+
+<br> sub_object_imageid - table
+<br> sub_object_id: C01_01_01 (FK)
+<br> image_id: I01 (PK)
+
+
+<br> image_data - table
+<br> image_id: I01 (FK)
+<br> image_path: link or the path
+<br> image_size: in kb
+<br> image_resolution: ...
+<br> image_type: .png
+
 
 Later, We created a physical database on MYSQL Workbench.
 Sindhura established connection to workbench from python using the below code.
