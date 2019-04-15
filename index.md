@@ -235,7 +235,7 @@ go;
 * * *
 
 
-[Link to another page](./another-page.html).
+[The Database Part](./another-page.html).
 
 
 ## What work is left over
