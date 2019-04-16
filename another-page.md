@@ -174,7 +174,7 @@ else:
 
 ```
 
-# Usecase Examples:
+# Few of the Usecases
 
 1. Get all images with certain angles
 2. Get all images of certain category
