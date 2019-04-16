@@ -4,7 +4,7 @@ layout: default
 
 # The Database Part
 
-Description: This is a report about the database work we have done
+description: This is a report about the database work we have done
 
 
 To get started with the database work first we had to figure out how do we collect the image data of so many images together in a database.
@@ -173,11 +173,30 @@ else:
   cnx.close()
 
 ```
-Usecase Examples:
-1. Get all images with certain angles
-2. Get all images of certain category
-3. Get image properties of the selected image
-4. Get 3D image model of particular category
-5. Get images of objects within a range of angles
+
+# The Cloud Part
+
+We are using Google cloud platform as per our requirement, we chose GCP over AWS becayse of cost factors and we had credits for GCP
+
+Cloud  Requirement Analysis for the Dry Run
+The Analysis of cloud and its servies was analysed based on the following features:- 
+1 Cloud SQL Instance for Database
+ 
+<br> SQL Standard 
+<br> M/C type : db-n1-standard-4
+<br> RAM(GB) : 15
+<br> Max Storage Capacity: 10,230 GB
+<br> Max Connections: 4000
+ 
+We will require Cloud type as : My SQL and Second Generation.
+ 
+1 Cloud Storage
+ 
+1 Compute Engine Instance
+ 
+M/C type: n1-standard-8
+Virtual CPU: 8
+Memory: 30 GB
+
 
 [back](./)
