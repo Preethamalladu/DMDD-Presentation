@@ -198,7 +198,20 @@ M/C type: n1-standard-8
 Virtual CPU: 8
 Memory: 30 GB
 
-[]()
+![Octocat](https://raw.githubusercontent.com/Preethamalladu/DMDD-Presentation/master/image1.png)
+![Octocat](https://raw.githubusercontent.com/Preethamalladu/DMDD-Presentation/master/image2.png)
+![Octocat](https://raw.githubusercontent.com/Preethamalladu/DMDD-Presentation/master/image3.png)
+![Octocat](https://raw.githubusercontent.com/Preethamalladu/DMDD-Presentation/master/image4.png)
+![Octocat](https://raw.githubusercontent.com/Preethamalladu/DMDD-Presentation/master/image5.png)
+![Octocat](https://raw.githubusercontent.com/Preethamalladu/DMDD-Presentation/master/image6.png)
+![Octocat](https://raw.githubusercontent.com/Preethamalladu/DMDD-Presentation/master/image7.png)
+![Octocat](https://raw.githubusercontent.com/Preethamalladu/DMDD-Presentation/master/image8.png)
+![Octocat](https://raw.githubusercontent.com/Preethamalladu/DMDD-Presentation/master/image9.png)
+![Octocat](https://raw.githubusercontent.com/Preethamalladu/DMDD-Presentation/master/image10.png)
+![Octocat](https://raw.githubusercontent.com/Preethamalladu/DMDD-Presentation/master/image11.png)
+![Octocat](https://raw.githubusercontent.com/Preethamalladu/DMDD-Presentation/master/image12.png)
+![Octocat](https://raw.githubusercontent.com/Preethamalladu/DMDD-Presentation/master/image13.png)
+![Octocat](https://raw.githubusercontent.com/Preethamalladu/DMDD-Presentation/master/image14.png)
 
 
 
