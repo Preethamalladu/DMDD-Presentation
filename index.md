@@ -203,7 +203,7 @@ while(cx<= 360):
 
 *   Update a website with more featues like filters, views (front,back, ..etc), option to download.
 
-*   Cloud setup 
+*   Improving cloud setup 
 
 
 
@@ -218,4 +218,12 @@ while(cx<= 360):
 *   Add an option website that allows users to view images based on user search
 
 *   Add an option to the website with allows users to upload a 3d model and get images for that model
+
+
+
+* * *
+
+
+
+
 
