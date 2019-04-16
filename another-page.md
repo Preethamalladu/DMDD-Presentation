@@ -176,11 +176,11 @@ else:
 
 Usecase Examples:
 
-Get all images with certain angles
-Get all images of certain category
-Get image properties of the selected image
-Get 3D image model of particular category
-Get images of objects within a range of angles
+1. Get all images with certain angles
+2. Get all images of certain category
+3. Get image properties of the selected image
+4. Get 3D image model of particular category
+5. Get images of objects within a range of angles
 
 # The Cloud Part
 
