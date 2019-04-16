@@ -11,21 +11,9 @@ To get started with the database work first we had to figure out how do we colle
 
 
 So initially, we came up with the python script to get just one image property. That anyone can look up for any 3D image shots captured using Maya from the database.
-The challenge was to understand how python reads an image file from any file location. I went through few websites and youtube videos and came across this function numpy and cv2. 
+The challenge was to understand how python reads an image file from any file location. We went through few websites and youtube videos and came across this function numpy and cv2. 
 
-
-Numpy is a library that is used for computing scientific/mathematical data. The arrays in numpy are faster than python lists. 
-
-
-OpenCV, is an image and video processing library in python. OpenCV is used for all sorts of image and video analysis, like facial recognition and detection, license plate reading, photo exditing, advanced robotic vision, optical character recognition, and a whole lot more. Using CV2 we can use the opencv package in python to read an image.
-
-
-Next is to get the library cv2 installed in my machine.
-
-
-So I installed the library:
-pip install opencv-python in the anaconda prompt window.
-Initially I came up with the below script:
+The initial script we created got us the properties of just one image.
 
 ```python
 import numpy as np 
@@ -36,8 +24,7 @@ print('Image shape is \n', img.size)
 print('Image datatype is \n', img.dtype)
 ```
 
- 
-Later we  worked with **Harini Grandhi** to get all the image properties of a 3d model imported in an excel using for loop as stated below:
+Then we came up with a script to get the properties of various images in just one folder imported to an excel sheet.
 
 
 ```python
@@ -66,9 +53,56 @@ image_df.to_csv (r'C:/Users/harini/Desktop/image.csv', index = None, header=True
 
 ```
 
+And finally we came up with the final code of getting the image properties from various folders inside a parent folder and got the required data exported to an excel file.
+
+
+```python
+from PIL import Image
+import os, os.path
+import numpy as np
+import cv2
+import pandas as pd
+
+dir = "C:/Users/Rashika/Desktop/DMDD Project/Images"
+r = []
+n=0
+valid_images = [".jpg",".jpeg",".png"]
+for root, dirs, files in os.walk(dir):
+ print(root)
+ #print(dirs)
+ #print(files)
+ df= pd.DataFrame(columns = ['Shape', 'Size',
+                          'Datatype'])
+
+
+ for name in files:
+     #print(dirs)
+     print(name)
+     ext = os.path.splitext(name)[1]
+     if ext.lower() not in valid_images:
+         continue
+     else:
+         img = cv2.imread(os.path.join(root,name))
+        ## print(os.path.join(root,name))
+         i4=name
+         i1=img.shape
+         i2=os.path.getsize(os.path.join(root,name))
+         i3=img.dtype
+         print("name",i4)
+         print('Image shape is \n',img.shape)
+         print('Image size is \n', os.path.getsize(os.path.join(root,name)))
+         print ('Image datatype is \n',img.dtype)
+         df.loc[n, 'Shape'] = i1
+         df.loc[n, 'Size'] = i2
+         df.loc[n, 'Datatype'] = i3
+         n+=1
+
+```
+
+
 After which we did a dry run on few sample images to get the image properties imported in an excel sheet which got us successful in grabbing the data.
 
-Post which I along with Sindhura Reddy and Harini Grandhi came up with the below database schema inorder to store all the object models and images with its properties.
+Post which we came up with the below database schema inorder to store all the object models and images with its properties.
 
 The below is the database schema:
 ![Octocat](https://raw.githubusercontent.com/Preethamalladu/DMDD-Presentation/master/hiii.png)
@@ -107,7 +141,8 @@ The above schema can be explained with an example below:
 
 
 Later, We created a physical database on MYSQL Workbench.
-Sindhura established connection to workbench from python using the below code.
+
+And then we finally established connection to workbench from python using the below code.
 Challenge faced during the connection establishment is regarding the password authentication with the local host for which the user has to be identified with mysql_native_password on workbench using the below query.
 
 ```sql
