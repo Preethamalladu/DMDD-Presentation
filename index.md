@@ -71,21 +71,21 @@ It is clear what the problem is,  bad lights and gradients.
 
 ![Branching](https://raw.githubusercontent.com/Preethamalladu/DMDD-Presentation/master/Save%20image%20faults.png)
 
-This environment was created by **Abhi Patodi** , but this still had the same problems as the earlier versions.
+This environment still had the same problems as the earlier versions .e, gradients
 
 
 *   Iteration Three :
 
 ![Branching](https://raw.githubusercontent.com/Preethamalladu/DMDD-Presentation/master/objX0Y315Z0.jpg)
 
-In this environment , instead of using a box environment like above I used a sphere environment and avoided getting gradients but the shadows were static, 
+In this environment , instead of using a box environment like above we used a sphere environment and avoided getting gradients but the shadows were static. 
 
 
 *   Iteration Four :
 
 ![Octocat](https://raw.githubusercontent.com/Preethamalladu/DMDD-Presentation/master/Final%202.png)
 
-This environment was done by **Akash Srivatsava**, and was selected as final environment since it had minial noise and had dyanmic shadows.
+This environment was selected as final environment since it had minial noise and had dyanmic shadows.
 
 ## Choosing which texture to use
 
