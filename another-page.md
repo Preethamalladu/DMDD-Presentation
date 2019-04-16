@@ -198,7 +198,7 @@ M/C type: n1-standard-8
 Virtual CPU: 8
 Memory: 30 GB
 
-
+[]()
 
 
 
