@@ -18,7 +18,7 @@ The initial script we created got us the properties of just one image.
 ```python
 import numpy as np 
 import cv2
-cv2.imread('/Users/Anindita/Desktop/Capture.png')
+cv2.imread('.../Desktop/Capture.png')
 print('Image shape is \n', img.shape)
 print('Image shape is \n', img.size)
 print('Image datatype is \n', img.dtype)
@@ -34,7 +34,7 @@ import cv2
 import os
 import os, os.path
 photos = []
-for filename in os.listdir('C:/Users/harini/Desktop/photos'):
+for filename in os.listdir('.../Desktop/photos'):
    photos.append(filename)
 file_name = []
 shape = []
@@ -63,7 +63,7 @@ import numpy as np
 import cv2
 import pandas as pd
 
-dir = "C:/Users/Rashika/Desktop/DMDD Project/Images"
+dir = ".../Desktop/DMDD Project/Images"
 r = []
 n=0
 valid_images = [".jpg",".jpeg",".png"]
@@ -174,7 +174,7 @@ else:
 
 ```
 
-Usecase Examples:
+# Usecase Examples:
 
 1. Get all images with certain angles
 2. Get all images of certain category
