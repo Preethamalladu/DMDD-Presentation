@@ -36,7 +36,7 @@ After the first week we have have tried few diffrent ways to render images ,inor
 
 ### Just the object rotated in space
 
-> In this method I just rotated the image using its pivot 
+> In this method we just rotated the image using its pivot 
 
 ![Branching](https://raw.githubusercontent.com/Preethamalladu/DMDD-Presentation/master/chair_test_x0y0z7.jpg)
 
@@ -56,7 +56,7 @@ As we can see the images dont seem so refined, and also rotating the object does
 > This was the part which took a lot of time, we had to come up with a solution which gave us dynamic shaodows meaning when the cameras angle changed the shadows have to change too.
 
 
-**Problems faced and solutions I came up with**
+**Problems faced and solutions we came up with**
 
 Firstly, we had to make sure we do not want gradients in the background. Therefore I came up with diffrent iterations of environments
 
@@ -67,18 +67,37 @@ Firstly, we had to make sure we do not want gradients in the background. Therefo
 
 It is clear what the problem is,  bad lights and gradients.
 
+*   Iteration Two
 
-*   Iteration Two :
+![Branching](https://raw.githubusercontent.com/Preethamalladu/DMDD-Presentation/master/Save%20image%20faults.png)
+
+This environment was created by **Abhi Patodi** , but this still had the same problems as the earlier versions.
+
+
+*   Iteration Three :
 
 ![Branching](https://raw.githubusercontent.com/Preethamalladu/DMDD-Presentation/master/objX0Y315Z0.jpg)
 
 In this environment , instead of using a box environment like above I used a sphere environment and avoided getting gradients but the shadows were static, 
 
-*   Iteration Three :
 
-![Octocat](https://raw.githubusercontent.com/Preethamalladu/DMDD-Presentation/master/Telescope_X_0_Y_45_Z_90.png)
+*   Iteration Four :
+
+![Octocat](https://raw.githubusercontent.com/Preethamalladu/DMDD-Presentation/master/Final%202.png)
 
 This environment was done by **Akash Srivatsava**, and was selected as final environment since it had minial noise and had dyanmic shadows.
+
+## Choosing which texture to use
+
+We have tried few diffrent textures and this is a sample of what we came up with , after few trails and tests we decided to go with "lambert" texture.
+
+![Branching](https://raw.githubusercontent.com/Preethamalladu/DMDD-Presentation/master/tmpcd00148_thumb.png)
+
+## Naming convention
+
+We decided to come up with a naming convention which allows us to retrive images based on the category and certain angle.
+
+> CategoryName_ObjectName_X_degree_Y_degree_Z_degree
 
 
 ## Scripting to get Images
@@ -110,6 +129,13 @@ def screenShot(objName, l):
     editor =  'renderView'
     cmds.renderWindowEditor( editor, e=True,refresh = True,removeAllImages = True, writeImage=('path'+'awp'+str(l)), removeImage = True)
 ```
+
+### Mesh smoothing 
+
+Inorder to get smooth images without sharp edges, mesh smoothing was used.
+
+![Branching](https://raw.githubusercontent.com/Preethamalladu/DMDD-Presentation/master/Image%20from%20iOS.jpg)
+
 
 ### Finalized Script to rotate and take images
 
@@ -158,79 +184,6 @@ while(cx<= 360):
 
 ```
 
-### My contribution towards the final code
-
-**Though the logic for rotating images is similar we chose while loop over for loop for simplicity**
-
-**This snippet automatically sets the renderer to Maya Hardware 2.0 and saves images as .PNG files**
-
-```python
-cmds.setAttr('defaultRenderGlobals.ren', 'mayaHardware2', type = 'string')
-cmds.setAttr('defaultRenderGlobals.imageFormat', 32)')
-```
-
-**This snippet makes sure to take images which are only above the ground thus avoiding redundent images**
-
-```python
-camPos = cmds.xform(camName, q=True, ws=True, rp=True)
-if( camPos[1] > 1.0):
-    screenShot(l)
-```
-**Naming convention**
-
-```python
-name = "_X_"+str(cx) + "_Y_"+str(cy) + "_Z_"+str(cz)
-```
-
-* * *
-
-## Stored Procedures to get Front, Back, Top, Left, Right views of the object from the data base
-
-**Top View**
-```sql
-create procedure TopView @ObjName varchar(30) 
-as
-select images from image_table where images like
-              '%' + @ObjName` + '_X_90_Y_0_Z_180' 
-go;
-```
-
-**Front View**
-```sql
-create procedure FrontView @ObjName varchar(30) 
-as
-select images from image_table where images like
-              '%' + @ObjName` + '_X_0_Y_0_Z_0' 
-go;
-```
-
-**Right View**
-```sql
-create procedure RightView @ObjName varchar(30) 
-as
-select images from image_table where images like
-              '%' + @ObjName` + '_X_0_Y_90_Z_0' 
-go;
-```
-
-**Back View**
-```sql
-create procedure BacKView @ObjName varchar(30) 
-as
-select images from image_table where images like
-              '%' + @ObjName` + '_X_0_Y_180_Z_0' 
-go;
-```
-
-**Left View**
-```sql
-create procedure LeftView @ObjName varchar(30) 
-as
-select images from image_table where images like
-              '%' + @ObjName` + '_X_0_Y_270_Z_0' 
-go;
-```
-
 
 * * *
 
@@ -240,13 +193,13 @@ go;
 
 ## What work is left over
 
-*   Create a website (**Abhi Patodi, has started the work Aditya, Nikunj, Me, Akash will share the work**)
+*   Create a website (**Abhi Patodi, has started the work Aditya, Nikunj, Me, Akash are currently working on it will show a demo now**
 
-*   Cloud setup (**Nikunj is currently working at it**)
+*   Cloud setup (**Nikunj Doshi is currently working at it**)
 
 
 
-## What I am planning to contribute over the summer for the database as a part of SkunkWorks
+## What we are planning to contribute over the summer for the database as a part of SkunkWorks
 
 *   Figure out a way to automate the process of setting the textures and combineing images
 
@@ -254,7 +207,7 @@ go;
 
 *   Add more objects 
 
+*   Add an option website that allows users to view images based on user search
 
-```
-The final element.
-```
+*   Add an option to the website with allows users to upload a 3d model and get images for that model
+
