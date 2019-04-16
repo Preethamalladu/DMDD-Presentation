@@ -184,7 +184,7 @@ else:
 
 # The Cloud Part
 
-We are using Google cloud platform as per our requirement, we chose GCP over AWS becayse of cost factors and we had credits for GCP
+We are using Google cloud platform as per our requirement, we chose GCP over AWS because of cost factors and we had credits for GCP
 
 Cloud  Requirement Analysis for the Dry Run
 The Analysis of cloud and its servies was analysed based on the following features:- 
