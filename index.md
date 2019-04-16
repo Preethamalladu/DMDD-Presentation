@@ -93,6 +93,14 @@ We have tried few diffrent textures and this is a sample of what we came up with
 
 ![Branching](https://raw.githubusercontent.com/Preethamalladu/DMDD-Presentation/master/tmpcd00148_thumb.png)
 
+## Meshing and Rescaling
+
+Most of the objects which we got online needed some preprocessing such as making the image smaller / larger , combining the mesh (most objects are a collection of smaller objects)
+
+![Octocat](https://raw.githubusercontent.com/Preethamalladu/DMDD-Presentation/master/Capture.PNG)
+
+![Octocat](https://raw.githubusercontent.com/Preethamalladu/DMDD-Presentation/master/Capture1.PNG)
+
 ## Naming convention
 
 We decided to come up with a naming convention which allows us to retrive images based on the category and certain angle.
@@ -193,9 +201,9 @@ while(cx<= 360):
 
 ## What work is left over
 
-*   Create a website (**Abhi Patodi, has started the work Aditya, Nikunj, Me, Akash are currently working on it will show a demo now**
+*   Update a website with more featues like filters, views (front,back, ..etc), option to download.
 
-*   Cloud setup (**Nikunj Doshi is currently working at it**)
+*   Cloud setup 
 
 
 
