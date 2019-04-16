@@ -41,7 +41,7 @@ shape = []
 size =[]
 img_type = []
 for i in range(0,len(photos)):
-   fn = 'C:/Users/harini/Desktop/photos/{}'.format(photos[i])
+   fn = '.../Desktop/photos/{}'.format(photos[i])
    file_name.append(fn)
 for i in file_name:
    img = cv2.imread(i)
