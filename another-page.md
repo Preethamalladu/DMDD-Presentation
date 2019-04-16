@@ -4,7 +4,7 @@ layout: default
 
 # The Database Part
 
-description: This is a report about the database work we have done
+Description: This is a report about the database work we have done
 
 
 To get started with the database work first we had to figure out how do we collect the image data of so many images together in a database.
@@ -173,4 +173,11 @@ else:
   cnx.close()
 
 ```
+Usecase Examples:
+1. Get all images with certain angles
+2. Get all images of certain category
+3. Get image properties of the selected image
+4. Get 3D image model of particular category
+5. Get images of objects within a range of angles
+
 [back](./)
