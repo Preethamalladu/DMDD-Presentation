@@ -146,9 +146,9 @@ And then we finally established connection to workbench from python using the be
 Challenge faced during the connection establishment is regarding the password authentication with the local host for which the user has to be identified with mysql_native_password on workbench using the below query.
 
 ```sql
-ALTER USER ‘root’@‘localhost’
+ALTER USER 'root'@'localhost'
  IDENTIFIED WITH mysql_native_password
- BY ‘password’;
+ BY 'password';
 ```
 
 ```python
