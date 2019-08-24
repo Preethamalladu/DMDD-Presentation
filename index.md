@@ -3,8 +3,6 @@ layout: default
 ---
 
 
-This is a short description of what we have done so far.
-
 **Content**
 
 *   Understanding Maya Scripting
@@ -17,9 +15,9 @@ This is a short description of what we have done so far.
 
 ## Understanding Maya Scripting
 
-In the first week of the project we have gone through the process on how we can automate tasks in Maya using python and mel, we acquired knowledge about scripting from, Proffersor Nick Brown and through various other sites.
+In the first week of the project I have gone through the process on how to automate tasks in Maya using python and mel, it acquired knowledge about scripting from, Proffersor Nick Brown and through various other sites.
 
-### Things we learnt
+### Things learnt
 
 > How to Translate and Rotate an object in 3D space
 
@@ -32,11 +30,11 @@ In the first week of the project we have gone through the process on how we can 
 
 ## The Image Generation Part
 
-After the first week we have have tried few diffrent ways to render images ,inorder to do so we have tried the follwoing method
+After the first week,I have tried few diffrent ways to render images ,inorder to do so tried the follwoing method
 
 ### Just the object rotated in space
 
-> In this method we just rotated the image using its pivot 
+> In this method just rotated the image using its pivot 
 
 ![Branching](https://raw.githubusercontent.com/Preethamalladu/DMDD-Presentation/master/chair_test_x0y0z7.jpg)
 
@@ -53,12 +51,12 @@ As we can see the images dont seem so refined, and also rotating the object does
 
 ### Creating Environments to get dynamic shadows
 
-> This was the part which took a lot of time, we had to come up with a solution which gave us dynamic shaodows meaning when the cameras angle changed the shadows have to change too.
+> This was the part which took a lot of time, so had to come up with a solution which gave us dynamic shaodows meaning when the cameras angle changed the shadows have to change too.
 
 
-**Problems faced and solutions we came up with**
+**Problems faced and solutions came up with**
 
-Firstly, we had to make sure we do not want gradients in the background. Therefore I came up with diffrent iterations of environments
+Firstly, I had to make sure to not have gradients in the background. Therefore I came up with diffrent iterations of environments
 
 
 *   Iteration One :
@@ -78,7 +76,7 @@ This environment still had the same problems as the earlier versions .e, gradien
 
 ![Branching](https://raw.githubusercontent.com/Preethamalladu/DMDD-Presentation/master/objX0Y315Z0.jpg)
 
-In this environment , instead of using a box environment like above we used a sphere environment and avoided getting gradients but the shadows were static. 
+In this environment , instead of using a box environment like above used a sphere environment and avoided getting gradients but the shadows were static. 
 
 
 *   Iteration Four :
@@ -89,13 +87,13 @@ This environment was selected as final environment since it had minial noise and
 
 ## Choosing which texture to use
 
-We have tried few diffrent textures and this is a sample of what we came up with , after few trails and tests we decided to go with "lambert" texture.
+having tried few diffrent textures and this is a sample of what I came up with , after few trails and tests, decided to go with "lambert" texture.
 
 ![Branching](https://raw.githubusercontent.com/Preethamalladu/DMDD-Presentation/master/tmpcd00148_thumb.png)
 
 ## Meshing and Rescaling
 
-Most of the objects which we got online needed some preprocessing such as making the image smaller / larger , combining the mesh (most objects are a collection of smaller objects)
+Most of the objects which I got online needed some preprocessing such as making the image smaller / larger , combining the mesh (most objects are a collection of smaller objects)
 
 ![Octocat](https://raw.githubusercontent.com/Preethamalladu/DMDD-Presentation/master/Capture.PNG)
 
@@ -103,7 +101,7 @@ Most of the objects which we got online needed some preprocessing such as making
 
 ## Naming convention
 
-We decided to come up with a naming convention which allows us to retrive images based on the category and certain angle.
+Decided to come up with a naming convention which allows us to retrive images based on the category and certain angle.
 
 > CategoryName_ObjectName_X_degree_Y_degree_Z_degree
 
@@ -197,28 +195,6 @@ while(cx<= 360):
 
 
 [The Database Part](./another-page.html).
-
-
-## What work is left over
-
-*   Update a website with more featues like filters, views (front,back, ..etc), option to download.
-
-*   Improving cloud setup 
-
-
-
-## What we are planning to contribute over the summer for the database as a part of SkunkWorks
-
-*   Figure out a way to automate the process of setting the textures and combineing images
-
-*   Pipeline the process of generating images
-
-*   Add more objects 
-
-*   Add an option website that allows users to view images based on user search
-
-*   Add an option to the website with allows users to upload a 3d model and get images for that model
-
 
 
 * * *
