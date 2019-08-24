@@ -4,16 +4,12 @@ layout: default
 
 # The Database Part
 
-description: This is a report about the database work we have done
+To get started with the database work first task was to figure out how to collect the data of many images together in a database.
 
 
-To get started with the database work first we had to figure out how do we collect the image data of so many images together in a database.
+So initially, came up with the python script to get just one image property. That anyone can look up for any 3D image shots captured using Maya from the database.
 
-
-So initially, we came up with the python script to get just one image property. That anyone can look up for any 3D image shots captured using Maya from the database.
-The challenge was to understand how python reads an image file from any file location. We went through few websites and youtube videos and came across this function numpy and cv2. 
-
-The initial script we created got us the properties of just one image.
+Theis initial script got the properties of specified image.
 
 ```python
 import numpy as np 
@@ -24,7 +20,7 @@ print('Image shape is \n', img.size)
 print('Image datatype is \n', img.dtype)
 ```
 
-Then we came up with a script to get the properties of various images in just one folder imported to an excel sheet.
+Then working on it, came up with a script to get the properties of various images in a one folder and imported to an excel sheet.
 
 
 ```python
@@ -53,7 +49,7 @@ image_df.to_csv (r'C:/Users/harini/Desktop/image.csv', index = None, header=True
 
 ```
 
-And finally we came up with the final code of getting the image properties from various folders inside a parent folder and got the required data exported to an excel file.
+And finally  came up with the final code of getting the image properties from various folders inside a parent folder and got the required data exported to an excel file.
 
 
 ```python
@@ -100,10 +96,6 @@ for root, dirs, files in os.walk(dir):
 ```
 
 
-After which we did a dry run on few sample images to get the image properties imported in an excel sheet which got us successful in grabbing the data.
-
-Post which we came up with the below database schema inorder to store all the object models and images with its properties.
-
 The below is the database schema:
 ![Octocat](https://raw.githubusercontent.com/Preethamalladu/DMDD-Presentation/master/hiii.png)
 
@@ -140,10 +132,7 @@ The above schema can be explained with an example below:
 <br> image_type: .png
 
 
-Later, We created a physical database on MYSQL Workbench.
-
-And then we finally established connection to workbench from python using the below code.
-Challenge faced during the connection establishment is regarding the password authentication with the local host for which the user has to be identified with mysql_native_password on workbench using the below query.
+Later, created a physical database on MYSQL Workbench.
 
 ```sql
 ALTER USER 'root'@'localhost'
@@ -184,7 +173,7 @@ else:
 
 # The Cloud Part
 
-We are using Google cloud platform as per our requirement, we chose GCP over AWS because of cost factors and also as we had credits for GCP
+ Utilizing Google cloud platform as per our requirement, chose GCP over AWS because of cost factors and also as we had credits for GCP
 
 Cloud  Requirement Analysis for the Dry Run
 The Analysis of cloud and its servies was analysed based on the following features:- 
@@ -196,7 +185,7 @@ The Analysis of cloud and its servies was analysed based on the following featur
 <br> Max Storage Capacity: 10,230 GB
 <br> Max Connections: 4000
  
-We will require Cloud type as : My SQL and Second Generation.
+Will require Cloud type as : My SQL and Second Generation.
  
 1 Cloud Storage
  
