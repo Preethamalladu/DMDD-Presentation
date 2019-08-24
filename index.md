@@ -194,7 +194,7 @@ while(cx<= 360):
 * * *
 
 
-[The Database Part](./another-page.html).
+[The Database Part](./another-page.md).
 
 
 * * *
